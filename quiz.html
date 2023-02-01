@@ -2,6 +2,22 @@
 <html>
 <head>
     <title>Quiz</title>
+    <script>
+        var score = 0;
+        function evaluateQuiz(){
+            for( var i = 1; i < 11; i++){
+                var ele = document.getElementsByName("answer"+i);
+                for(var j = 0; j <= 3; j++){
+                    if(ele[j].checked == true && ele[j].value == "correct"){
+                        score = score + 1;
+                        break;
+                    }
+                }
+            }
+            alert("You have a score of: "+score+"pts");
+            
+        }
+    </script>
 </head>
 <body>
     <h1>Welcome to the Quiz!</h1>
@@ -9,77 +25,77 @@
     <table style="border-collapse: collapse;" border="1pt">
         <tr>
             <td><label for="question1">What is SDLC?</label></td>
-            <td><input type="radio"name="answer" id="answer"> A Programming Language <br>
-            <input type="radio" name="answer" id="answer"> Software Development Life Cycle <br> <!--Correct-->
-            <input type="radio"name="answer" id="answer">A Framework <br>
-            <input type="radio" name="answer" id="answer"> Software Directory Load Code</td>
+            <td><input type="radio"name="answer1" id="answer1"> A Programming Language <br>
+            <input type="radio" value="correct" name="answer1" id="answer2"> Software Development Life Cycle <br> <!--Correct-->
+            <input type="radio"name="answer1" id="answer3">A Framework <br>
+            <input type="radio" name="answer1" id="answer4"> Software Directory Load Code</td>
         </tr>
         <tr>
             <td><label for="question2">All are responsibilities of a Software Project Manager except for...</label></td>
-            <td><input type="radio"name="answer2" id="answer2"> Project planning <br>
+            <td><input type="radio"name="answer2" id="answer1"> Project planning <br>
                 <input type="radio" name="answer2" id="answer2"> Project status tracking <br>
-                <input type="radio"name="answer2" id="answer2">Resource management<br>
-                <input type="radio" name="answer2" id="answer2">Creative planning</td> <!--Correct-->
+                <input type="radio"name="answer2" id="answer3">Resource management<br>
+                <input type="radio" value="correct" name="answer2" id="answer4">Creative planning</td> <!--Correct-->
         </tr>
         <tr>
             <td><label for="question3">What is Cohesion?</label></td>
-            <td><input type="radio"name="answer3" id="answer3"> When the elements of a module are inter-related to one another <br> <!--Correct-->
-                <input type="radio" name="answer3" id="answer3"> When the elements of a module are not inter-related to one another <br>  
+            <td><input type="radio" value="correct" name="answer3" id="answer1"> When the elements of a module are inter-related to one another <br> <!--Correct-->
+                <input type="radio" name="answer3" id="answer2"> When the elements of a module are not inter-related to one another <br>  
                 <input type="radio"name="answer3" id="answer3">When all the attributes are set to private in a module<br>
-                <input type="radio" name="answer3" id="answer3">When all the attributes areset to public in a module</td>
+                <input type="radio" name="answer3" id="answer4">When all the attributes areset to public in a module</td>
         </tr>
         <tr>
             <td><label for="question4">What is Coupling?</label></td>
-            <td><input type="radio"name="answer4" id="answer4"> When the elements of a module are inter-related to one another <br>
-                <input type="radio" name="answer4" id="answer4"> When the elements of a module are not inter-related to one another <br> <!--Correct-->
-                <input type="radio"name="answer4" id="answer4">When all the attributes are set to private in a module<br>
+            <td><input type="radio"name="answer4" id="answer1"> When the elements of a module are inter-related to one another <br>
+                <input type="radio" value="correct" name="answer4" id="answer2"> When the elements of a module are not inter-related to one another <br> <!--Correct-->
+                <input type="radio"name="answer4" id="answer3">When all the attributes are set to private in a module<br>
                 <input type="radio" name="answer4" id="answer4">When all the attributes areset to public in a module</td>
         </tr>
         <tr>
             <td><label for="question5">Which is not a phase of of SDLC?</label></td>
-            <td><input type="radio"name="answer5" id="answer5"> Requirement Analysis <br>
-                <input type="radio" name="answer5" id="answer5"> Design <br> 
-                <input type="radio"name="answer5" id="answer5">Coding<br>
-                <input type="radio" name="answer5" id="answer5">Market Reseach</td> <!--Correct-->
+            <td><input type="radio"name="answer5" id="answer1"> Requirement Analysis <br>
+                <input type="radio" name="answer5" id="answer2"> Design <br> 
+                <input type="radio"name="answer5" id="answer3">Coding<br>
+                <input type="radio" value="correct" name="answer5" id="answer4">Market Reseach</td> <!--Correct-->
         </tr>
         <tr>
             <td><label for="question6">Which is not a Project Management tools.</label></td>
-            <td><input type="radio"name="answer6" id="answer6"> Checklists <br>
-                <input type="radio" name="answer6" id="answer6"> Histograms <br> 
-                <input type="radio"name="answer6" id="answer6">Microsoft Project<br>
-                <input type="radio" name="answer6" id="answer6">Microsoft Teams</td> <!--Correct-->
+            <td><input type="radio"name="answer6" id="answer1"> Checklists <br>
+                <input type="radio" name="answer6" id="answer2"> Histograms <br> 
+                <input type="radio"name="answer6" id="answer3">Microsoft Project<br>
+                <input type="radio" value="correct" name="answer6" id="answer4">Microsoft Teams</td> <!--Correct-->
         </tr>
         <tr>
             <td><label for="question7">What are CASE tools?</label></td>
-            <td><input type="radio"name="answer7" id="answer7"> Tools utilized by the IDE to accelerate the coding process <br>
-                <input type="radio" name="answer7" id="answer7"> Tools utilized to accelerate the activities of the SDLC <br> <!--Correct--> 
-                <input type="radio"name="answer7" id="answer7">Tools utilized to analyze the reception of the software in the market<br>
-                <input type="radio" name="answer7" id="answer7">Tools utilized to check the CASE of letters in code</td> 
+            <td><input type="radio"name="answer7" id="answer1"> Tools utilized by the IDE to accelerate the coding process <br>
+                <input type="radio" value="correct" name="answer7" id="answer2"> Tools utilized to accelerate the activities of the SDLC <br> <!--Correct--> 
+                <input type="radio"name="answer7" id="answer3">Tools utilized to analyze the reception of the software in the market<br>
+                <input type="radio" name="answer7" id="answer4">Tools utilized to check the CASE of letters in code</td> 
         </tr>
         <tr>
             <td><label for="question8">With these you can measure Project execution except for...</label></td>
-            <td><input type="radio"name="answer8" id="answer8"> Status Reports <br>
-                <input type="radio" name="answer8" id="answer8"> CPU usage <br> <!--Correct--> 
-                <input type="radio"name="answer8" id="answer8">Milestone checklists<br>
-                <input type="radio" name="answer8" id="answer8">Activity Monitoring</td> 
+            <td><input type="radio"name="answer8" id="answer1"> Status Reports <br>
+                <input type="radio" value="correct" name="answer8" id="answer2"> CPU usage <br> <!--Correct--> 
+                <input type="radio"name="answer8" id="answer3">Milestone checklists<br>
+                <input type="radio" name="answer8" id="answer4">Activity Monitoring</td> 
         </tr>
         <tr>
             <td><label for="question9">What are the Functional Requirements?</label></td>
-            <td><input type="radio"name="answer9" id="answer9"> Hardware requirements for supporting a software application <br>
-                <input type="radio" name="answer9" id="answer9"> Measure the usability of the application <br> 
-                <input type="radio"name="answer9" id="answer9">Features that a software product is expected to perform.<br> <!--Correct--> 
-                <input type="radio" name="answer9" id="answer9">Software requirements for supporting a software application</td> 
+            <td><input type="radio"name="answer9" id="answer1"> Hardware requirements for supporting a software application <br>
+                <input type="radio" name="answer9" id="answer2"> Measure the usability of the application <br> 
+                <input type="radio" value="correct" name="answer9" id="answer3">Features that a software product is expected to perform.<br> <!--Correct--> 
+                <input type="radio" name="answer9" id="answer4">Software requirements for supporting a software application</td> 
         </tr>
         <tr>
             <td><label for="question10">What are Non-Functional Requirements?</label></td>
-            <td><input type="radio"name="answer10" id="answer10"> Hardware requirements for supporting a software application <br>
-                <input type="radio" name="answer10" id="answer10"> Software requirements for supporting a software application <br> <!--Correct--> 
-                <input type="radio"name="answer10" id="answer10">Features that a software product is expected to perform.<br>
-                <input type="radio" name="answer10" id="answer10">Measure the usability of the application</td> <!--Correct--> 
+            <td><input type="radio"name="answer10" id="answer1"> Hardware requirements for supporting a software application <br>
+                <input type="radio" value="correct" name="answer10" id="answer2"> Software requirements for supporting a software application <br> <!--Correct--> 
+                <input type="radio"name="answer10" id="answer3">Features that a software product is expected to perform.<br>
+                <input type="radio" name="answer10" id="answer4">Measure the usability of the application</td> <!--Correct--> 
         </tr>
     </table>
     <center>
-    <br><td align="center"><a href="LogOut.html"><button type="submit" name="form" id="form" value="form" >Submit</button></td>
+    <br><td align="center"><a href="LogOut.html"><button type="submit" name="form" id="form" value="form" onclick="javascript:evaluateQuiz()">Submit</button></td>
     </center>
     </body>
 </html>

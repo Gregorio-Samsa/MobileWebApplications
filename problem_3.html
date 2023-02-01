@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function gradeCalculator1(i){
+            let grade1 = parseInt(document.getElementById("Work"+i).value);
+            let grade2 = parseInt(document.getElementById("Lab"+i).value);
+            let grade3 = parseInt(document.getElementById("Proj"+i).value);
+            let grade4 = parseInt(document.getElementById("Final"+i).value);
+            let score = (grade1 + grade2 + grade3 + grade4)/4;
+            if (score > 100 || score < 0){
+                alert("Invalid Grade!");
+            }
+            else{
+                document.getElementById("Total"+i).innerHTML = score;
+            }
+            if (score >= 97 && score <= 100){
+                document.getElementById("grade"+i).innerHTML = "A+";
+            }
+            else{
+                if (score >= 93 && score < 97){
+                    document.getElementById("grade"+i).innerHTML = "A";
+                }
+                else{
+                    if(score >= 90 && score < 93){
+                        document.getElementById("grade"+i).innerHTML = "A-";
+                    }
+                    else{
+                        if(score >= 87 && score < 90){
+                            document.getElementById("grade"+i).innerHTML = "B+";
+                        }
+                        else{
+                            if(score >= 83 && score < 87){
+                                document.getElementById("grade"+i).innerHTML = "B";
+                            }
+                            else{
+                                if(score >= 80 && score < 83){
+                                    document.getElementById("grade"+i).innerHTML = "B-";
+                                }
+                                else{
+                                    if(score >= 77 && score < 80){
+                                        document.getElementById("grade"+i).innerHTML = "C+";
+                                    }
+                                    else{
+                                        if(score >= 73 && score < 77){
+                                            document.getElementById("grade"+i).innerHTML = "C";
+                                        }
+                                        else{
+                                            if(score >= 70 && score < 73){
+                                                document.getElementById("grade"+i).innerHTML = "C-";
+                                            }
+                                            else{
+                                                if(score >= 67 && score < 70){
+                                                    document.getElementById("grade"+i).innerHTML = "D+";
+                                                }
+                                                else{
+                                                    if(score >= 63 && score < 67){
+                                                        document.getElementById("grade"+i).innerHTML = "D";
+                                                    }
+                                                    else{
+                                                        if(score >= 60 && score < 63){
+                                                            document.getElementById("grade"+i).innerHTML = "D-";
+                                                        }
+                                                        else{
+                                                            if(score < 60 && score >= 0){
+                                                                document.getElementById("grade"+i).innerHTML = "F";
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Grade calculator</title>
+</head>
+<body>
+    <center>
+        <h1>Grade calculator</h1>
+        <table border="2pt" align="center">
+            <tr>
+                <td>Student</td>
+                <td>Class Work</td>
+                <td>Lab Work</td>
+                <td>Project Review</td>
+                <td>Final Project</td>
+                <td>Total</td>
+                <td></td>
+                <td>Grade</td>
+            </tr>
+            <tr>
+                <td>Marlon Gaitan</td>
+                <td><input type="text" name="Work1" id="Work1" placeholder="0" size="1%"></td>
+                <td><input type="text" name="Lab1" id="Lab1" placeholder="0" size="1%"></td>
+                <td><input type="text" name="Proj1" id="Proj1" placeholder="0" size="1%"></td>
+                <td><input type="text" name="Final1" id="Final1" placeholder="0" size="1%"></td>
+                <td><label name="Total1" id="Total1"> 0 </label></td>
+                <td><button type="button" id="button1" value="Calculate Grade" onclick="javascript:gradeCalculator1(1)">Calculate Grade</button></td>
+                <td><label name="grade1" id="grade1">F</label></td>
+            </tr>
+            <tr>
+                <td>Roberto Aguero</td>
+                <td><input type="text" name="Work2" id="Work2" placeholder="0" size="1%"></td>
+                <td><input type="text" name="Lab2" id="Lab2" placeholder="0" size="1%"></td>
+                <td><input type="text" name="Proj2" id="Proj2" placeholder="0" size="1%"></td>
+                <td><input type="text" name="Final2" id="Final2" placeholder="0" size="1%"></td>
+                <td><label name="Total2" id="Total2"> 0 </label></td>
+                <td><button type="button" id="button2" value="Calculate Grade" onclick="javascript:gradeCalculator1(2)">Calculate Grade</button></td>
+                <td><label name="grade2" id="grade2">F</label></td>
+            </tr>
+            <tr>
+                <td>Isaac Bautista</td>
+                <td><input type="text" name="Work3" id="Work3" placeholder="0" size="1%"></td>
+                <td><input type="text" name="Lab3" id="Lab3" placeholder="0" size="1%"></td>
+                <td><input type="text" name="Proj3" id="Proj3" placeholder="0" size="1%"></td>
+                <td><input type="text" name="Final3" id="Final3" placeholder="0" size="1%"></td>
+                <td><label name="Total3" id="Total3"> 0 </label></td>
+                <td><button type="button" id="button3" value="Calculate Grade" onclick="javascript:gradeCalculator1(3)">Calculate Grade</button></td>
+                <td><label name="grade3" id="grade3">F</label></td>
+            </tr>
+            <tr>
+                <td>Carlos Borjes</td>
+                <td><input type="text" name="Work4" id="Work4" placeholder="0" size="1%"></td>
+                <td><input type="text" name="Lab4" id="Lab4" placeholder="0" size="1%"></td>
+                <td><input type="text" name="Proj4" id="Proj4" placeholder="0" size="1%"></td>
+                <td><input type="text" name="Final4" id="Final4" placeholder="0" size="1%"></td>
+                <td><label name="Total4" id="Total4"> 0 </label></td>
+                <td><button type="button" id="button4" value="Calculate Grade" onclick="javascript:gradeCalculator1(4)">Calculate Grade</button></td>
+                <td><label name="grade4" id="grade4">F</label></td>
+            </tr>
+            <tr>
+                <td>John Brown</td>
+                <td><input type="text" name="Work5" id="Work5" placeholder="0" size="1%"></td>
+                <td><input type="text" name="Lab5" id="Lab5" placeholder="0" size="1%"></td>
+                <td><input type="text" name="Proj5" id="Proj5" placeholder="0" size="1%"></td>
+                <td><input type="text" name="Final5" id="Final5" placeholder="0" size="1%"></td>
+                <td><label name="Total5" id="Total5"> 0 </label></td>
+                <td><button type="button" id="button5" value="Calculate Grade" onclick="javascript:gradeCalculator1(5)">Calculate Grade</button></td>
+                <td><label name="grade5" id="grade5">F</label></td>
+            </tr>
+            <tr>
+                <td>Pamela Carta</td>
+                <td><input type="text" name="Work6" id="Work6" placeholder="0" size="1%"></td>
+                <td><input type="text" name="Lab6" id="Lab6" placeholder="0" size="1%"></td>
+                <td><input type="text" name="Proj6" id="Proj6" placeholder="0" size="1%"></td>
+                <td><input type="text" name="Final6" id="Final6" placeholder="0" size="1%"></td>
+                <td><label name="Total6" id="Total6"> 0 </label></td>
+                <td><button type="button" id="button6" value="Calculate Grade" onclick="javascript:gradeCalculator1(6)">Calculate Grade</button></td>
+                <td><label name="grade6" id="grade6">F</label></td>
+            </tr>
+            <tr>
+                <td>Robin Chavez</td>
+                <td><input type="text" name="Work7" id="Work7" placeholder="0" size="1%"></td>
+                <td><input type="text" name="Lab7" id="Lab7" placeholder="0" size="1%"></td>
+                <td><input type="text" name="Proj7" id="Proj7" placeholder="0" size="1%"></td>
+                <td><input type="text" name="Final7" id="Final7" placeholder="0" size="1%"></td>
+                <td><label name="Total7" id="Total7"> 0 </label></td>
+                <td><button type="button" id="button7" value="Calculate Grade" onclick="javascript:gradeCalculator1(7)">Calculate Grade</button></td>
+                <td><label name="grade7" id="grade7">F</label></td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>

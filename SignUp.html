@@ -1,6 +1,57 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script>
+        function checkUserName(){
+            user = document.getElementById("userid").value;
+            pswd = document.getElementById("pwd").value;
+            if(user == "Justus" && pswd == 123){
+                alert("Valid!");
+            }
+            else{
+                alert("Invalid!");
+            }
+        }
+        function clearTextBoxes(){
+            document.getElementById("userid").value = "";
+            document.getElementById("pwd").value = "";
+        }
+        function checkPasswords(){
+            if(document.getElementById("signpwd").value == document.getElementById("signcpwd").value){
+                alert("Passwords are valid!");
+            }
+            else{
+                alert("Passwords are invalid!");
+            }
+        }
+        function displayData(){
+            alert("Date of Birth: " + document.getElementById("userdob").value);
+            if(document.getElementById("HS").checked){
+                alert("You have a HS degree");
+            }
+            if(document.getElementById("BS").checked){
+                alert("You have a BS degree");
+            }
+            if(document.getElementById("MS").checked){
+                alert("You have a MS degree");
+            }
+            if(document.getElementById("PhD").checked){
+                alert("You have a PhD degree");
+            }
+            if(document.getElementById("py").checked){
+                alert("You have a Python skill");
+            }
+            if(document.getElementById("cpp").checked){
+                alert("You have a C++ Skill");
+            }
+            if(document.getElementById("jv").checked){
+                alert("You have a Java Skill");
+            }
+            if(document.getElementById("jvs").checked){
+                alert("You have a JavaScript skill");
+            }
+        }
+    </script>
     <title>Log-in | Sign-Up Form</title>
 </head>
 <body>
@@ -19,8 +70,8 @@
                 <td><input type="password" name="pwd" id="pwd"></td>
             </tr>
             <tr>
-                <td align="center"><a href="home.html"><button name="login" id="login" value="login">Log in</button></td>
-                <td align="center"><button type="reset" name="resetbtn" id="resetbtn" value="Reset">Reset</button></td>
+                <td align="center"><a href="home.html"><button type="submit" name="login" id="login" value="login" onclick="javascript:checkUserName()">Log in</button></td></a>
+                <td align="center"><button type="reset" name="resetbtn" id="resetbtn" value="Reset" onclick="javascript:clearTextBoxes()">Reset</button></td>
             </tr>
         </table>
     </center>
@@ -47,10 +98,17 @@
         </tr>
         <tr>
             <td>Education</td>
-            <td>Highschool<input type="checkbox" name="highschool" id="highschool"><br>
+            <td>Highschool<input type="checkbox" name="HS" id="HS"><br>
                 BS Degree<input type="checkbox" name="BS" id="BS"><br>
                 MS Degree<input type="checkbox" name="MS" id="MS"><br>
                 PhD Degree<input type="checkbox" name="PhD" id="PhD"></td>
+        </tr>
+        <tr>
+            <td>Skills</td>
+            <td>Python<input type="checkbox" name="py" id="py"><br>
+                C++<input type="checkbox" name="cpp" id="cpp"><br>
+                Java<input type="checkbox" name="jv" id="jv"><br>
+                JavaScript<input type="checkbox" name="jvs" id="jvs"></td>
         </tr>
         <tr>
             <td>Email Address:</td>
@@ -58,14 +116,14 @@
         </tr>
         <tr>
             <td>Password:</td>
-            <td><input type="password" name="pwd" id="pwd"></td>
+            <td><input type="password" name="signpwd" id="signpwd"></td>
         </tr>
         <tr>
             <td>Confirm Password:</td>
-            <td><input type="password" name="cpwd" id="cpwd"></td>
+            <td><input type="password" name="signcpwd" id="signcpwd"></td>
         </tr>
         <tr>
-            <td align="center"><a href="home.html"><button type="submit" name="login" id="login" value="login">Submit</button></td>
+            <td align="center"><a href="home.html"><button type="submit" name="signup" id="signup" value="signup" onclick="javascript:displayData()">Submit</button></td></a>
             <td align="center"><button type="reset" name="resetbtn" id="resetbtn" value="Reset">Reset</button></td>
         </tr>
     </table>
