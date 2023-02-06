@@ -1,0 +1,20 @@
+.string{
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.string td button{
+    display: block;
+    width: 55px;
+    height: 55px;
+    font-size: 25px;
+}
+
+#createWord{
+    margin: 0 auto;
+    column-span: all;
+    display: block;
+    width: 500px;
+    height: 55px;
+    font-size: 25px;
+}
