@@ -46,7 +46,6 @@ letter11.onclick = function(e){
 }
 
 createWord.onclick = function(e){
-    alert(word);
     var newlabel = document.createElement("label");
     newlabel.setAttribute("for",count);
     newlabel.innerHTML = word;
