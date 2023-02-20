@@ -49,9 +49,31 @@ li .menuBtn
 	text-decoration: none;
 	display: block;
 }
+.menu-content a:hover{
+    color:#2A5E47;
+}
 .menuBtn:hover .menu-content
 {
 	display:block;
+}
+.displayCart{
+    display:none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2A5E47;
+    right: 0;
+    padding: 10px;
+    margin-top: 45px;
+	position:absolute;
+	background-color:#67EBB2;
+    width: 30%;
+	z-index:1;
+}
+.displayCart a {
+    color:#2A5E47;
+	text-decoration: none;
+}
+.cartBtn:hover .displayCart{
+    display: block;
 }
 .container{
     background-color: #469E78;
@@ -70,10 +92,11 @@ li .menuBtn
     border: 0;
     transition: 0.3s;
     z-index:1;
-
 }
 .menuBtn button:hover{
     background-color: #67EBB2; 
+}
+.menuBtn button a:hover{
     color: #2A5E47;
 }
 .banner{
@@ -119,6 +142,7 @@ li .menuBtn
     background-color: #333333;
     border-radius: 5px;
     color: white;
+    z-index: -10;
 }
 .videogames{
     display: none;
@@ -129,6 +153,7 @@ li .menuBtn
     background-color: #333333;
     border-radius: 5px;
     color: white;
+    z-index: -10;
 }
 .books{
     display: none;
@@ -227,4 +252,69 @@ h1:hover{
     width: auto;
     height: 70%;
     display: block;
+}
+.cartBtn{
+    position:static;
+    display:flex;
+    margin-top: 5px;
+    margin-left: 900px;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+.cartBtn img{
+    width: 90%;
+    -webkit-filter: invert(100%);
+}
+.numItems{
+    text-align: center;
+    display: flex;
+    position:absolute;
+    background-color: #67EBB2;
+    margin-left: 30px;
+    max-width: 25px;
+    max-height: 25px;
+    min-width: 25px;
+    min-height: 25px;
+    border-radius: 25px;
+    z-index: 1;
+}
+.numItems a{
+    object-fit: contain;
+    position:static;
+    display: block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #2A5E47;
+    text-align: center;
+    margin: auto;
+    text-decoration: none;
+}
+.addCart{
+    right: 10px;
+    position: absolute;
+    width: auto;
+}
+.addCart button{
+    border: 0;
+    background-color: #469E78;
+    height: 35px;
+    margin-left: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+.addCart button a{
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font-size: 20px;
+    font-weight:bold;
+    transition: 0.3s;    
+}
+.addCart button:hover{
+    background-color: #67EBB2;
+}
+.addCart button a:hover{
+    color: #2A5E47;
 }

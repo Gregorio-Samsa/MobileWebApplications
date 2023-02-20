@@ -1,3 +1,4 @@
+var count = 0;
 vid.onclick = function(e){
     document.getElementById("computer").style.display='none';
     document.getElementById("videogames").style.display='flex';
@@ -82,4 +83,44 @@ comp5.onclick = function(e){
 }
 popContainer5.onclick = function(e){
     document.getElementById("popContainer5").style.display="none";
+}
+comp0_it0.onclick = function(e){
+    moreItems()
+    var node = document.createElement('div');        
+    node.innerHTML = '<a id="item' + count + '" name="item' + count + '">' + document.getElementById("comp0").innerText + '</a>';       
+    document.getElementById('displayCart').appendChild(node);
+}
+comp1_it0.onclick = function(e){
+    moreItems()
+    var node = document.createElement('div');        
+    node.innerHTML = '<a id="item' + count + '" name="item' + count + '">' + document.getElementById("comp1").innerText + '</a>';       
+    document.getElementById('displayCart').appendChild(node);
+}
+comp2_it0.onclick = function(e){
+    moreItems()
+    var node = document.createElement('div');        
+    node.innerHTML = '<a id="item' + count + '" name="item' + count + '">' + document.getElementById("comp2").innerText + '</a>';       
+    document.getElementById('displayCart').appendChild(node);
+}
+comp3_it0.onclick = function(e){
+    moreItems()
+    var node = document.createElement('div');        
+    node.innerHTML = '<a id="item' + count + '" name="item' + count + '">' + document.getElementById("comp3").innerText + '</a>';       
+    document.getElementById('displayCart').appendChild(node);
+}
+comp4_it0.onclick = function(e){
+    moreItems()
+    var node = document.createElement('div');        
+    node.innerHTML = '<a id="item' + count + '" name="item' + count + '">' + document.getElementById("comp4").innerText + '</a>';       
+    document.getElementById('displayCart').appendChild(node);
+}
+comp5_it0.onclick = function(e){
+    moreItems()
+    var node = document.createElement('div');        
+    node.innerHTML = '<a id="item' + count + '" name="item' + count + '">' + document.getElementById("comp5").innerText + '</a>';       
+    document.getElementById('displayCart').appendChild(node);
+}
+function moreItems(){
+    count = count + 1;
+    document.getElementById("numIt").innerHTML = count;
 }
